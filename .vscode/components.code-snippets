@@ -1,0 +1,49 @@
+{
+  "typeScriptReactArrowFunctionComponent": {
+    "prefix": "tsfc",
+    "body": [
+      "type ${1:${TM_FILENAME_BASE}}Props = {",
+      "\t",
+      "};",
+      "",
+      "export default function ${1:${TM_FILENAME_BASE}}(props: ${1:${TM_FILENAME_BASE}}Props): JSX.Element {",
+      "\tconst {} = props;",
+      "",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t$0",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      ""
+    ],
+    "description": "TS React component"
+  },
+  "typeScriptContext": {
+    "prefix": "tsc",
+    "body": [
+      "import { useContext, FC, createContext } from \"react\";",
+      "",
+      "type ${1:${TM_FILENAME_BASE}}ContextType = {};",
+      "const ${1:${TM_FILENAME_BASE}}Context = createContext<${1:${TM_FILENAME_BASE}}ContextType | undefined>(undefined);",
+      "",
+      "type ${1:${TM_FILENAME_BASE}}ContextProviderProps = {};",
+      "export const ${1:${TM_FILENAME_BASE}}Provider: FC<${1:${TM_FILENAME_BASE}}ContextProviderProps> = (props) => {",
+      "\tconst { children } = props;",
+      "",
+      "\tconst value = {};",
+      "\treturn <${1:${TM_FILENAME_BASE}}Context.Provider value={value}>{children}</${1:${TM_FILENAME_BASE}}Context.Provider>;",
+      "};",
+      "",
+      "export const use${1:${TM_FILENAME_BASE}} = () => {",
+      "\tconst context = useContext(${1:${TM_FILENAME_BASE}}Context);",
+      "\tif (context === undefined) {",
+      "\t\tthrow new Error(\"use${1:${TM_FILENAME_BASE}} must be used within a ${1:${TM_FILENAME_BASE}}Provider\");",
+      "\t}",
+      "\treturn context;",
+      "};",
+      ""
+    ],
+    "description": "TS React context boilerplate"
+  }
+}
