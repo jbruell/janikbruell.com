@@ -1,2 +1,25 @@
 @use "abstracts/spacing";
 @use "reset";
+@use "utils" as *;
+
+body {
+    color: clr(neutral, 200);
+    background-color: clr(primary, 600);
+}
+
+* {
+    ::-webkit-scrollbar {
+        width: 16px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        border: 4px solid transparent;
+        background-color: clr(neutral, 300);
+        background-clip: content-box;
+
+        &:hover {
+            background-color: clr(neutral, 500);
+        }
+    }
+}
