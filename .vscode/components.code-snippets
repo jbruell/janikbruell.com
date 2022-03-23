@@ -4,7 +4,7 @@
     "body": [
       "import styles from \"./${TM_FILENAME_BASE}.module.scss\"",
       "",
-      "type ${TM_FILENAME_BASE}Props = {",
+      "export type ${TM_FILENAME_BASE}Props = {",
       "\t",
       "};",
       "",
@@ -20,6 +20,14 @@
       ""
     ],
     "description": "TS React component"
+  },
+  "componentIndex": {
+    "prefix": "cin",
+    "body": [
+      "export { default as ${TM_DIRECTORY/^.+\\\\(.*)$/$1/} } from \"./${TM_DIRECTORY/^.+\\\\(.*)$/$1/}\";",
+      "export type { ${TM_DIRECTORY/^.+\\\\(.*)$/$1/}Props } from \"./${TM_DIRECTORY/^.+\\\\(.*)$/$1/}\";",
+      ""
+    ]
   },
   "typeScriptContext": {
     "prefix": "tsc",
