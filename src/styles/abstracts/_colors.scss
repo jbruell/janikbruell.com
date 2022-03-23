@@ -1,0 +1,36 @@
+@use "sass:map";
+
+$colors: (
+    primary: (
+        100: hsl(150, 33%, 95%),
+        200: hsl(150, 33%, 80%),
+        300: hsl(150, 33%, 65%),
+        400: hsl(150, 33%, 50%),
+        500: hsl(150, 33%, 30%),
+        600: hsl(150, 33%, 10%),
+    ),
+    secondary: (
+        100: hsl(10, 61%, 95%),
+        200: hsl(10, 61%, 80%),
+        300: hsl(10, 61%, 65%),
+        400: hsl(10, 61%, 50%),
+        500: hsl(10, 61%, 30%),
+        600: hsl(10, 61%, 10%),
+    ),
+    neutral: (
+        100: hsl(150, 5%, 100%),
+        200: hsl(150, 5%, 90%),
+        300: hsl(150, 5%, 75%),
+        400: hsl(150, 5%, 65%),
+        500: hsl(150, 5%, 50%),
+        600: hsl(150, 5%, 25%),
+        700: hsl(150, 5%, 10%),
+    ),
+);
+
+@function clr($color, $variant) {
+    @if not(map.has-key($colors, $color, $variant)) {
+        @error "Invalid color: #{$color}, #{$variant}";
+    }
+    @return map.get($colors, $color, $variant);
+}
