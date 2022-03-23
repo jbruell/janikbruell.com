@@ -1,4 +1,4 @@
-@use "abstracts" as *;
+@use "abstracts/breakpoints" as *;
 
 @mixin mq($size, $mode: min) {
     @if ($mode != min and $mode != max) {
