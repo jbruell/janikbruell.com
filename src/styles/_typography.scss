@@ -1,0 +1,29 @@
+:root {
+    font-family: -apple-system, Inter, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+        Droid Sans, Helvetica Neue, sans-serif;
+    font-size: 16px;
+
+    --font-md: clamp(100%, 0.5rem + 1vw, 1.3rem);
+    --font-lg: clamp(100%, 0.5rem + 2vw, 1.8rem);
+    --font-xl: clamp(100%, 1rem + 2vw, 2.4rem);
+    --font-xxl: clamp(100%, 2rem + 4vw, 5rem);
+}
+
+body {
+    font-size: var(--font-md);
+}
+
+h1 {
+    font-size: var(--font-xxl);
+    font-weight: 800;
+}
+
+h2 {
+    font-size: var(--font-xl);
+    font-weight: 600;
+}
+
+h3 {
+    font-size: var(--font-lg);
+    font-weight: 400;
+}

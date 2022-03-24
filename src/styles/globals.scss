@@ -1,5 +1,6 @@
 @use "abstracts/spacing";
 @use "reset";
+@use "typography";
 @use "utils" as *;
 
 body {
@@ -22,4 +23,11 @@ body {
             background-color: clr(neutral, 500);
         }
     }
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
 }
