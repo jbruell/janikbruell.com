@@ -1,0 +1,42 @@
+@use "utils" as *;
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .greeting {
+        @include mono;
+        position: relative;
+        color: clr(secondary, 200);
+        margin-bottom: var(--space-md);
+        padding-left: 1rem;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -1rem;
+            transform: translateY(-50%);
+            width: 1.5rem;
+            height: 2px;
+            background-color: clr(secondary, 200);
+        }
+    }
+
+    .name {
+        color: clr(neutral, 200);
+        margin-bottom: var(--space-md);
+
+        span {
+            display: block;
+            color: clr(neutral, 400);
+        }
+    }
+
+    .summary {
+        color: clr(neutral, 300);
+        max-width: 55ch;
+    }
+}

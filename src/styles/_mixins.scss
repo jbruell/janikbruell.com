@@ -9,3 +9,7 @@
         @content;
     }
 }
+
+@mixin mono {
+    font-family: "Fira Code", "Courier New", Courier, monospace;
+}
