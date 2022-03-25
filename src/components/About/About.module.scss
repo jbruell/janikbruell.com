@@ -6,7 +6,9 @@
         @include grid;
 
         .image {
+            object-fit: cover;
             width: 200px;
+            height: 150px;
             border-radius: 0.5rem;
             justify-self: center;
             align-self: center;

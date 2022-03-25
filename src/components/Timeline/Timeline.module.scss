@@ -1,0 +1,40 @@
+@use "utils" as *;
+
+.wrapper {
+    display: flex;
+    gap: 0.5rem;
+
+    @include mq(sm) {
+        gap: 1.5rem;
+    }
+
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    &:last-child {
+        .line {
+            display: none;
+        }
+    }
+
+    .filler {
+        flex: 1;
+    }
+
+    .dot {
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background-color: var(--first-color);
+    }
+
+    .line {
+        display: block;
+        width: 2px;
+        height: 100%;
+        background-color: var(--first-color);
+        transform: translate(6px, -7px);
+    }
+}

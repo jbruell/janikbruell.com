@@ -1,0 +1,7 @@
+@use "utils" as *;
+
+.wrapper {
+    .container {
+        @include container;
+    }
+}

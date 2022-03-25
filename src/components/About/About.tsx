@@ -9,7 +9,7 @@ export default function About(props: AboutProps): JSX.Element {
   return (
     <section className={`${styles.wrapper} section`} id="about">
       <h2 className="section__title">About Me</h2>
-      <span className="section__subtitle">My introduction</span>
+      <span className="section__subtitle">Nice to meet you!</span>
 
       <div className={styles.container}>
         <img
