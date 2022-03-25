@@ -1,4 +1,4 @@
-import { Header, Hero } from "@components";
+import { About, Header, Hero } from "@components";
 import type { NextPage } from "next";
 import Head from "next/head";
 
@@ -13,6 +13,7 @@ const Home: NextPage = () => {
       <Header />
       <main>
         <Hero />
+        <About />
       </main>
     </div>
   );
