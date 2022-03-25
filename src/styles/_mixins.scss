@@ -5,11 +5,18 @@
         @error "Parameter 'mode' must be either 'min' or 'max'!";
     }
 
-    @media (#{$mode}-width: bp($size)) {
+    @media only screen and (#{$mode}-width: bp($size)) {
         @content;
     }
 }
 
-@mixin mono {
-    font-family: "Fira Code", "Courier New", Courier, monospace;
+@mixin grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+@mixin container {
+    max-width: 768px;
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
 }

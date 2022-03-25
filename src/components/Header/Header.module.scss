@@ -1,0 +1,71 @@
+@use "utils" as *;
+
+.header {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+
+    nav {
+        @include container;
+        max-width: 968px;
+        height: var(--header-height);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo,
+        .toggle {
+            color: var(--title-color);
+            font-weight: var(--font-medium);
+
+            &:hover {
+                color: var(--first-color);
+                cursor: pointer;
+            }
+        }
+
+        .toggle {
+            font-size: 1.1rem;
+        }
+
+        .menu {
+            @include mq(md, max) {
+                position: fixed;
+                bottom: -100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--body-color);
+                padding: 1.5rem 1.5rem 2rem;
+                box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+                border-radius: 8px 8px 0 0;
+                transition: 0.3s;
+            }
+
+            &.open {
+                bottom: 0;
+            }
+
+            ul {
+                @include grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+            }
+
+            .close {
+                position: absolute;
+                right: 1.3rem;
+                bottom: 0.5rem;
+                font-size: 1.5rem;
+                cursor: pointer;
+                color: var(--first-color);
+
+                &:hover {
+                    color: var(--first-color-alt);
+                }
+            }
+        }
+    }
+}
