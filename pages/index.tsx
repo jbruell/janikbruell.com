@@ -1,4 +1,4 @@
-import { Header } from "@components";
+import { Header, Hero } from "@components";
 import type { NextPage } from "next";
 import Head from "next/head";
 
@@ -10,8 +10,9 @@ const Home: NextPage = () => {
         <meta name="description" content="The main page of my website" />
       </Head>
 
+      <Header />
       <main>
-        <Header />
+        <Hero />
       </main>
     </div>
   );
