@@ -33,11 +33,11 @@ export default function Footer(props: FooterProps): JSX.Element {
             <i className="uil uil-linkedin-alt"></i>
           </a>
         </div>
-
-        <p className={styles.copyright}>
-          &#169; Janik Brüll. All rights reserved.
-        </p>
       </div>
+
+      <p className={styles.copyright}>
+        &#169; Janik Brüll. All rights reserved.
+      </p>
     </footer>
   );
 }

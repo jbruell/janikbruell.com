@@ -16,7 +16,17 @@
 }
 
 @mixin container {
-    max-width: 768px;
-    margin-left: var(--mb-1-5);
-    margin-right: var(--mb-1-5);
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+
+    @include mq(sm) {
+        max-width: 768px;
+        margin-left: var(--mb-1-5);
+        margin-right: var(--mb-1-5);
+    }
+
+    @include mq(md) {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

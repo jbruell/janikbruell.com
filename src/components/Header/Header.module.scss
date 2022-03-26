@@ -9,6 +9,16 @@
     background-color: var(--body-color);
     transition: 0.3s;
 
+    @include mq(md) {
+        top: 0;
+        bottom: initial;
+        padding: 0 1rem;
+    }
+
+    @include mq(lg) {
+        padding: 0;
+    }
+
     &.elevated {
         box-shadow: var(--header-shadow);
     }
@@ -20,6 +30,16 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include mq(md) {
+            height: calc(var(--header-height) + 1.5rem);
+            column-gap: 1rem;
+
+            .toggle,
+            .close {
+                display: none;
+            }
+        }
 
         .logo,
         .toggle,
@@ -60,6 +80,14 @@
                 transition: 0.3s;
             }
 
+            @include mq(xs, max) {
+                padding: 2rem 0.25rem 4rem;
+            }
+
+            @include mq(md) {
+                margin-left: auto;
+            }
+
             &.open {
                 bottom: 0;
             }
@@ -68,6 +96,15 @@
                 @include grid;
                 grid-template-columns: repeat(3, 1fr);
                 gap: 2rem;
+
+                @include mq(xs, max) {
+                    column-gap: 0;
+                }
+
+                @include mq(md) {
+                    display: flex;
+                    column-gap: 2rem;
+                }
             }
 
             .close {

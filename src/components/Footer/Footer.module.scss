@@ -4,11 +4,28 @@
     background-color: var(--first-color-second);
     padding: 2rem 0 70px;
 
+    @include mq(md) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .container {
         @include container;
         @include grid;
 
         row-gap: 3.5rem;
+
+        @include mq(sm) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mq(md) {
+            padding: 0 1rem;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include mq(lg) {
+            padding: 0;
+        }
 
         .title,
         .subtitle,
@@ -31,25 +48,41 @@
             flex-direction: column;
             gap: 1.5rem;
 
+            @include mq(md) {
+                flex-direction: row;
+                gap: 2rem;
+            }
+
             a:hover {
                 color: var(--first-color-lighter);
             }
         }
 
-        .socials a {
-            font-size: 1.25rem;
-            margin-right: var(--mb-1-5);
+        .socials {
+            @include mq(md) {
+                justify-self: flex-end;
+            }
 
-            &:hover,
-            &:focus {
-                color: var(--first-color-lighter);
+            a {
+                font-size: 1.25rem;
+                margin-right: var(--mb-1-5);
+
+                &:hover,
+                &:focus {
+                    color: var(--first-color-lighter);
+                }
             }
         }
+    }
 
-        .copyright {
-            font-size: var(--smaller-font-size);
-            text-align: center;
-            color: var(--text-color-light);
+    .copyright {
+        font-size: var(--smaller-font-size);
+        text-align: center;
+        color: var(--text-color-light);
+        margin-top: 3rem;
+
+        @include mq(md) {
+            margin-top: 4.5rem;
         }
     }
 }

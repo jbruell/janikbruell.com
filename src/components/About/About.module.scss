@@ -5,25 +5,45 @@
         @include container;
         @include grid;
 
+        @include mq(sm) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mq(md) {
+            column-gap: 5rem;
+        }
+
         .image {
             object-fit: cover;
             width: 200px;
-            height: 150px;
+            aspect-ratio: 4 / 3;
             border-radius: 0.5rem;
             justify-self: center;
             align-self: center;
+
+            @include mq(md) {
+                width: 350px;
+            }
         }
 
         .data {
             .description {
                 text-align: center;
                 margin-bottom: var(--mb-2-5);
+
+                @include mq(md) {
+                    text-align: initial;
+                }
             }
 
             .info {
                 display: flex;
                 justify-content: space-evenly;
                 margin-bottom: var(--mb-2-5);
+
+                @include mq(md) {
+                    justify-content: space-between;
+                }
 
                 .title {
                     font-size: var(--h2-font-size);
@@ -45,6 +65,10 @@
             .buttons {
                 display: flex;
                 justify-content: center;
+
+                @include mq(md) {
+                    justify-content: initial;
+                }
             }
         }
     }

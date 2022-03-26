@@ -22,7 +22,8 @@ export default function HeaderLink(props: HeaderLinkProps): JSX.Element {
         onClick={onClick}
         className={active ? styles.active : undefined}
       >
-        <i className={`uil ${icon}`}></i> {children}
+        <i className={`uil ${icon}`}></i>
+        {children}
       </a>
     </li>
   );
