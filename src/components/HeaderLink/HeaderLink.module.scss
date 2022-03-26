@@ -7,7 +7,9 @@
         font-size: var(--small-font-size);
         font-weight: var(--font-medium);
 
-        &:hover {
+        &:hover,
+        &:focus,
+        &.active {
             color: var(--first-color);
         }
 

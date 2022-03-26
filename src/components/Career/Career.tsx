@@ -7,7 +7,7 @@ export default function Career(props: CareerProps): JSX.Element {
   const {} = props;
 
   return (
-    <section className={`${styles.wrapper} section`}>
+    <section className={`${styles.wrapper} section`} id="career">
       <h2 className="section__title">Career</h2>
       <span className="section__subtitle">My personal journey</span>
 

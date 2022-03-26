@@ -27,7 +27,7 @@ export default function Header(props: HeaderProps): JSX.Element {
             <HeaderLink href="#about" icon="uil-user" onClick={closeNav}>
               About
             </HeaderLink>
-            <HeaderLink href="#skills" icon="uil-file-alt" onClick={closeNav}>
+            <HeaderLink href="#career" icon="uil-file-alt" onClick={closeNav}>
               Skills
             </HeaderLink>
             <HeaderLink
