@@ -1,6 +1,7 @@
 import styles from "./Header.module.scss";
 import { HeaderLink } from "@components";
 import { useState } from "react";
+import useScrollPosition from "src/hooks/useScrollPosition";
 
 export type HeaderProps = {};
 
@@ -8,13 +9,16 @@ export default function Header(props: HeaderProps): JSX.Element {
   const {} = props;
 
   const [open, setOpen] = useState(false);
+  const showShadow = useScrollPosition((pos) => pos > 80);
 
   function closeNav() {
     setOpen(false);
   }
 
   return (
-    <header className={styles.header} id="header">
+    <header
+      className={`${styles.header} ${showShadow ? styles.elevated : undefined}`}
+    >
       <nav>
         <a href="#" className={styles.logo}>
           Janik
