@@ -13,6 +13,12 @@
         top: 0;
         bottom: initial;
         padding: 0 1rem;
+
+        @media screen and (max-height: bp(sm)) {
+            &.hidden {
+                transform: translateY(-100%);
+            }
+        }
     }
 
     @include mq(lg) {
