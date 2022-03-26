@@ -1,0 +1,55 @@
+@use "utils" as *;
+
+.wrapper {
+    background-color: var(--first-color-second);
+    padding: 2rem 0 70px;
+
+    .container {
+        @include container;
+        @include grid;
+
+        row-gap: 3.5rem;
+
+        .title,
+        .subtitle,
+        .links a,
+        .socials a {
+            color: #fff;
+        }
+
+        .title {
+            font-size: var(--h1-font-size);
+            margin-bottom: var(--mb-0-25);
+        }
+
+        .subtitle {
+            font-size: var(--small-font-size);
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            a:hover {
+                color: var(--first-color-lighter);
+            }
+        }
+
+        .socials a {
+            font-size: 1.25rem;
+            margin-right: var(--mb-1-5);
+
+            &:hover,
+            &:focus {
+                color: var(--first-color-lighter);
+            }
+        }
+
+        .copyright {
+            font-size: var(--smaller-font-size);
+            text-align: center;
+            color: var(--text-color-light);
+        }
+    }
+}

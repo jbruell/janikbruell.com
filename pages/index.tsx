@@ -1,4 +1,4 @@
-import { About, Career, Header, Hero } from "@components";
+import { About, Career, Footer, Header, Hero } from "@components";
 import type { NextPage } from "next";
 import Head from "next/head";
 
@@ -16,6 +16,7 @@ const Home: NextPage = () => {
         <About />
         <Career />
       </main>
+      <Footer />
     </div>
   );
 };
