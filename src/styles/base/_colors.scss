@@ -1,0 +1,20 @@
+:root {
+    --clr-primary-200: hsl(232, 92%, 85%);
+    --clr-primary-500: hsl(232, 69%, 61%);
+    --clr-primary-600: hsl(232, 57%, 53%);
+
+    --clr-title: hsl(232, 8%, 15%);
+    --clr-text-500: hsl(232, 8%, 45%);
+    --clr-text-400: hsl(232, 8%, 65%);
+
+    --clr-body: hsl(232, 60%, 99%);
+    --clr-footer-bg: var(--clr-primary-500);
+
+    &[data-theme="dark"] {
+        --clr-title: hsl(232, 8%, 95%);
+        --clr-text-500: hsl(232, 8%, 75%);
+
+        --clr-body: hsl(232, 28%, 12%);
+        --clr-footer-bg: hsl(232, 30%, 8%);
+    }
+}

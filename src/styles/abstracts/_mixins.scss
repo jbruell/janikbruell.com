@@ -1,4 +1,4 @@
-@use "abstracts/breakpoints" as *;
+@use "breakpoints" as *;
 
 @mixin mq($size, $mode: min) {
     @if ($mode != min and $mode != max) {
@@ -16,13 +16,13 @@
 }
 
 @mixin container {
-    margin-left: var(--mb-1);
-    margin-right: var(--mb-1);
+    margin-left: var(--space-1);
+    margin-right: var(--space-1);
 
     @include mq(sm) {
         max-width: 768px;
-        margin-left: var(--mb-1-5);
-        margin-right: var(--mb-1-5);
+        margin-left: var(--space-1-5);
+        margin-right: var(--space-1-5);
     }
 
     @include mq(md) {

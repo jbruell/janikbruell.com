@@ -1,0 +1,43 @@
+@use "base/colors";
+@use "base/reset";
+@use "base/scrollbars";
+@use "base/spacing";
+@use "base/typography";
+
+@use "components/buttons";
+@use "components/sections";
+
+@use "utils" as *;
+
+:root {
+    --header-height: 3rem;
+    --header-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+body {
+    margin-top: var(--header-height);
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--clr-body);
+    color: var(--clr-text-500);
+
+    @include mq(md) {
+        margin: 0;
+    }
+}
+
+main {
+    @include mq(md) {
+        padding: 0 1rem;
+    }
+    @include mq(lg) {
+        padding: 0;
+    }
+}
+
+* {
+    transition: color 0.3s, background-color 0.3s;
+}

@@ -27,14 +27,14 @@
         width: 13px;
         height: 13px;
         border-radius: 50%;
-        background-color: var(--first-color);
+        background-color: var(--clr-primary-500);
     }
 
     .line {
         display: block;
         width: 2px;
         height: 100%;
-        background-color: var(--first-color);
+        background-color: var(--clr-primary-500);
         transform: translate(6px, -7px);
     }
 }

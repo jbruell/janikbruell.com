@@ -11,12 +11,12 @@
     .subtitle {
         display: inline-flex;
         font-size: var(--small-font-size);
-        margin-bottom: var(--mb-1);
+        margin-bottom: var(--space-1);
     }
 
     .calendar {
         font-size: var(--smaller-font-size);
-        color: var(--text-color-light);
+        color: var(--clr-text-400);
 
         i {
             margin-right: 0.5rem;

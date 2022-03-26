@@ -2,7 +2,7 @@
     position: fixed;
     right: 1rem;
     bottom: -20%;
-    background-color: var(--first-color);
+    background-color: var(--clr-primary-500);
     opacity: 0.8;
     padding: 0 0.3rem;
     border-radius: 0.4rem;
@@ -14,7 +14,7 @@
     }
 
     &:hover {
-        background-color: var(--first-color-alt);
+        background-color: var(--clr-primary-600);
     }
 
     i {

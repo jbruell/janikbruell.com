@@ -12,12 +12,12 @@
 
         .content {
             @include grid;
-            grid-template-columns: 0.5fr 3fr;
+            grid-template-columns: 0.25fr 3fr;
             padding-top: 3.5rem;
             align-items: center;
 
-            @include mq(xs, max) {
-                grid-template-columns: 0.25fr 3fr;
+            @include mq(xs) {
+                grid-template-columns: 0.5fr 3fr;
             }
 
             @include mq(sm) {
@@ -40,10 +40,10 @@
 
                 .icon {
                     font-size: 1.25rem;
-                    color: var(--first-color);
+                    color: var(--clr-primary-500);
 
                     &:hover {
-                        color: var(--first-color-alt);
+                        color: var(--clr-primary-600);
                     }
                 }
             }
@@ -54,11 +54,11 @@
                     justify-self: center;
                 }
                 .blob {
-                    width: 200px;
-                    fill: var(--first-color);
+                    width: 180px;
+                    fill: var(--clr-primary-500);
 
-                    @include mq(xs, max) {
-                        width: 180px;
+                    @include mq(xs) {
+                        width: 200px;
                     }
 
                     @include mq(md) {
@@ -88,13 +88,13 @@
 
                 .subtitle {
                     font-size: var(--h3-font-size);
-                    color: var(--text-color);
+                    color: var(--clr-text-500);
                     font-weight: var(--font-medium);
-                    margin-bottom: var(--mb-0-75);
+                    margin-bottom: var(--space-0-75);
                 }
 
                 .description {
-                    margin-bottom: var(--mb-2);
+                    margin-bottom: var(--space-2);
                 }
             }
         }
@@ -108,7 +108,7 @@
             }
 
             a {
-                color: var(--first-color);
+                color: var(--clr-primary-500);
                 transition: 0.3s;
 
                 &:hover {
@@ -121,9 +121,9 @@
 
                 span {
                     font-size: var(--small-font-size);
-                    color: var(--title-color);
+                    color: var(--clr-title);
                     font-weight: var(--font-medium);
-                    margin-right: var(--mb-0-25);
+                    margin-right: var(--space-0-25);
                 }
 
                 i:last-child {

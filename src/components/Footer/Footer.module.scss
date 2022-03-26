@@ -1,7 +1,7 @@
 @use "utils" as *;
 
 .wrapper {
-    background-color: var(--first-color-second);
+    background-color: var(--clr-footer-bg);
     padding: 2rem 0 70px;
 
     @include mq(md) {
@@ -36,7 +36,7 @@
 
         .title {
             font-size: var(--h1-font-size);
-            margin-bottom: var(--mb-0-25);
+            margin-bottom: var(--space-0-25);
         }
 
         .subtitle {
@@ -54,7 +54,7 @@
             }
 
             a:hover {
-                color: var(--first-color-lighter);
+                color: var(--clr-primary-200);
             }
         }
 
@@ -65,11 +65,11 @@
 
             a {
                 font-size: 1.25rem;
-                margin-right: var(--mb-1-5);
+                margin-right: var(--space-1-5);
 
                 &:hover,
                 &:focus {
-                    color: var(--first-color-lighter);
+                    color: var(--clr-primary-200);
                 }
             }
         }
@@ -78,7 +78,7 @@
     .copyright {
         font-size: var(--smaller-font-size);
         text-align: center;
-        color: var(--text-color-light);
+        color: var(--clr-text-400);
         margin-top: 3rem;
 
         @include mq(md) {

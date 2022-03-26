@@ -1,0 +1,16 @@
+* {
+    ::-webkit-scrollbar {
+        width: 16px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        border: 4px solid transparent;
+        background-color: var(--clr-text-500);
+        background-clip: content-box;
+
+        &:hover {
+            background-color: var(--clr-title);
+        }
+    }
+}
