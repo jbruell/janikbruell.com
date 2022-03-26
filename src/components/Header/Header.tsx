@@ -2,6 +2,7 @@ import styles from "./Header.module.scss";
 import { HeaderLink } from "@components";
 import { useState } from "react";
 import useScrollPosition from "src/hooks/useScrollPosition";
+import { useTheme } from "next-themes";
 
 export type HeaderProps = {};
 
@@ -10,6 +11,7 @@ export default function Header(props: HeaderProps): JSX.Element {
 
   const [open, setOpen] = useState(false);
   const showShadow = useScrollPosition((pos) => pos > 80);
+  const { setTheme } = useTheme();
 
   function closeNav() {
     setOpen(false);
@@ -51,8 +53,18 @@ export default function Header(props: HeaderProps): JSX.Element {
           <i className={`uil uil-times ${styles.close}`} onClick={closeNav}></i>
         </div>
 
-        <div className={styles.toggle} onClick={() => setOpen(true)}>
-          <i className="uil uil-apps"></i>
+        <div className={styles.btns}>
+          <div
+            className={styles.themeToggle}
+            onClick={() =>
+              setTheme((theme: string) => (theme === "dark" ? "light" : "dark"))
+            }
+          >
+            <i className="uil uil-moon"></i>
+          </div>
+          <div className={styles.toggle} onClick={() => setOpen(true)}>
+            <i className="uil uil-apps"></i>
+          </div>
         </div>
       </nav>
     </header>
