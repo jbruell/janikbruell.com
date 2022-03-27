@@ -1,5 +1,5 @@
 import styles from "./Header.module.scss";
-import { HeaderLink } from "@components";
+import { HeaderLink, Icon } from "@components";
 import { useState } from "react";
 import useScrollPosition from "src/hooks/useScrollPosition";
 import { useTheme } from "next-themes";
@@ -32,30 +32,17 @@ export default function Header(props: HeaderProps): JSX.Element {
         </a>
         <div className={`${styles.menu} ${open ? styles.open : undefined}`}>
           <ul>
-            <HeaderLink href="#home" icon="uil-estate" onClick={closeNav}>
+            <HeaderLink href="#home" icon="Home" onClick={closeNav}>
               Home
             </HeaderLink>
-            <HeaderLink href="#about" icon="uil-user" onClick={closeNav}>
+            <HeaderLink href="#about" icon="User" onClick={closeNav}>
               About
             </HeaderLink>
-            <HeaderLink href="#career" icon="uil-file-alt" onClick={closeNav}>
+            <HeaderLink href="#career" icon="Briefcase" onClick={closeNav}>
               Skills
             </HeaderLink>
-            <HeaderLink
-              href="#services"
-              icon="uil-briefcase-alt"
-              onClick={closeNav}
-            >
-              Services
-            </HeaderLink>
-            <HeaderLink href="#portfolio" icon="uil-scenery" onClick={closeNav}>
-              Portfolio
-            </HeaderLink>
-            <HeaderLink href="#contact" icon="uil-message" onClick={closeNav}>
-              Contact
-            </HeaderLink>
           </ul>
-          <i className={`uil uil-times ${styles.close}`} onClick={closeNav}></i>
+          <Icon name="Times" className={styles.close} onClick={closeNav} />
         </div>
 
         <div className={styles.btns}>
@@ -65,10 +52,10 @@ export default function Header(props: HeaderProps): JSX.Element {
               setTheme((theme: string) => (theme === "dark" ? "light" : "dark"))
             }
           >
-            <i className="uil uil-moon"></i>
+            <Icon name="Moon" />
           </div>
           <div className={styles.toggle} onClick={() => setOpen(true)}>
-            <i className="uil uil-apps"></i>
+            <Icon name="Apps" />
           </div>
         </div>
       </nav>

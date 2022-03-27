@@ -9,12 +9,20 @@
     &:hover {
         background-color: var(--clr-primary-600);
     }
+
+    svg {
+        fill: #fff;
+    }
 }
 
 .button__icon {
     font-size: 1.25rem;
     margin-left: var(--space-0-5);
     transition: 0.3s;
+
+    &:is(svg) {
+        height: 1.25rem;
+    }
 }
 
 .button--flex {

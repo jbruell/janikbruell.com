@@ -1,3 +1,4 @@
+import { Icon } from "@components";
 import useScrollPosition from "src/hooks/useScrollPosition";
 import styles from "./ScrollUp.module.scss";
 
@@ -13,7 +14,7 @@ export default function ScrollUp(props: ScrollUpProps): JSX.Element {
       href="#"
       className={`${styles.wrapper} ${show ? styles.visible : undefined}`}
     >
-      <i className="uil uil-arrow-up"></i>
+      <Icon name="ArrowUp" />
     </a>
   );
 }

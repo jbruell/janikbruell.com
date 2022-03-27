@@ -38,12 +38,15 @@
                     transform: translateX(-6rem);
                 }
 
-                .icon {
-                    font-size: 1.25rem;
+                a {
                     color: var(--clr-primary-500);
 
-                    &:hover {
+                    &:hover,
+                    &:focus {
                         color: var(--clr-primary-600);
+                    }
+                    svg {
+                        height: 1.25rem;
                     }
                 }
             }
@@ -115,8 +118,8 @@
                     transform: translateY(0.25rem);
                 }
 
-                i:first-child {
-                    font-size: 2rem;
+                .mouseIcon {
+                    height: 2rem;
                 }
 
                 span {
@@ -126,8 +129,8 @@
                     margin-right: var(--space-0-25);
                 }
 
-                i:last-child {
-                    font-size: 1.25rem;
+                .arrowIcon {
+                    height: 1.25rem;
                 }
             }
         }

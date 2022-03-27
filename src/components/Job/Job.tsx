@@ -1,3 +1,4 @@
+import { Icon } from "@components";
 import styles from "./Job.module.scss";
 
 export type JobProps = {
@@ -14,7 +15,7 @@ export default function Job(props: JobProps): JSX.Element {
       <h3 className={styles.title}>{title}</h3>
       <span className={styles.subtitle}>{subtitle}</span>
       <div className={styles.calendar}>
-        <i className="uil uil-calendar-alt"></i>
+        <Icon name="Calendar" />
         {timeFrame}
       </div>
     </div>

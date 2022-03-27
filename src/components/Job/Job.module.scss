@@ -18,8 +18,13 @@
         font-size: var(--smaller-font-size);
         color: var(--clr-text-400);
 
-        i {
+        display: flex;
+        align-items: center;
+
+        svg {
+            height: 0.9rem;
             margin-right: 0.5rem;
+            margin-bottom: 0.1rem;
         }
     }
 }

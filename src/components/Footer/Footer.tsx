@@ -1,3 +1,4 @@
+import { Icon } from "@components";
 import styles from "./Footer.module.scss";
 
 export type FooterProps = {};
@@ -26,11 +27,15 @@ export default function Footer(props: FooterProps): JSX.Element {
         </ul>
 
         <div className={styles.socials}>
-          <a href="github.com" target="_blank">
-            <i className="uil uil-github-alt"></i>
+          <a href="https://github.com/jbruell" rel="noreferrer" target="_blank">
+            <Icon name="LinkedIn" className={styles.icon} />
           </a>
-          <a href="linkedin.com" target="_blank">
-            <i className="uil uil-linkedin-alt"></i>
+          <a
+            href="https://www.linkedin.com/in/janik-bruell/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <Icon name="Github" className={styles.icon} />
           </a>
         </div>
       </div>

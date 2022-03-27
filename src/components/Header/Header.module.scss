@@ -7,7 +7,7 @@
     left: 0;
     z-index: var(--z-fixed);
     background-color: var(--clr-body);
-    transition: 0.3s;
+    transition: all 0.3s;
 
     @include mq(md) {
         top: 0;
@@ -63,14 +63,11 @@
             display: flex;
             align-items: center;
             gap: var(--space-1);
-        }
 
-        .toggle {
-            font-size: 1.1rem;
-        }
-
-        .themeToggle {
-            font-size: 1.1rem;
+            svg {
+                height: 1.1rem;
+                margin-top: 0.5rem;
+            }
         }
 
         .menu {
@@ -83,7 +80,7 @@
                 padding: 1.5rem 1.5rem 3rem;
                 box-shadow: var(--header-shadow);
                 border-radius: 8px 8px 0 0;
-                transition: 0.3s;
+                transition: all 0.3s;
             }
 
             @include mq(xs, max) {
@@ -117,7 +114,7 @@
                 position: absolute;
                 right: 1.3rem;
                 bottom: 0.5rem;
-                font-size: 1.5rem;
+                height: 1.5rem;
                 cursor: pointer;
                 color: var(--clr-primary-500);
 

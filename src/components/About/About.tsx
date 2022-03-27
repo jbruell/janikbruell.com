@@ -1,5 +1,6 @@
 import styles from "./About.module.scss";
 import Image from "next/image";
+import { Icon } from "@components";
 
 export type AboutProps = {};
 
@@ -47,7 +48,8 @@ export default function About(props: AboutProps): JSX.Element {
 
           <div className={styles.buttons}>
             <a href="/cv.pdf" className="button button--flex">
-              Download CV<i className="uil uil-download-alt button__icon"></i>
+              Download CV
+              <Icon name="Download" className="button__icon" />
             </a>
           </div>
         </div>

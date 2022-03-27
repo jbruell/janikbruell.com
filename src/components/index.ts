@@ -5,5 +5,6 @@ export * from "./Hero";
 export * from "./Header";
 export * from "./HeaderLink";
 export * from "./Job";
+export * from "./Icon";
 export * from "./ScrollUp";
 export * from "./Timeline";

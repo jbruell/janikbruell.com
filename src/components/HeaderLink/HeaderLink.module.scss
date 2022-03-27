@@ -15,8 +15,8 @@
             color: var(--clr-primary-500);
         }
 
-        i {
-            font-size: 1.2rem;
+        .icon {
+            height: 1.2rem;
 
             @include mq(md) {
                 display: none;

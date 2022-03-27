@@ -2,9 +2,13 @@
     position: fixed;
     right: 1rem;
     bottom: -20%;
+    display: flex;
+    align-items: center;
+
+    color: #fff;
     background-color: var(--clr-primary-500);
     opacity: 0.8;
-    padding: 0 0.3rem;
+    padding: 0.3rem;
     border-radius: 0.4rem;
     z-index: var(--z-tooltip);
     transition: 0.4s;
@@ -13,12 +17,12 @@
         bottom: 5rem;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: var(--clr-primary-600);
     }
 
-    i {
-        font-size: 1.5rem;
-        color: #fff;
+    svg {
+        height: 1.5rem;
     }
 }

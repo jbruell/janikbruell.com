@@ -1,10 +1,11 @@
+import { Icon, IconProps } from "@components";
 import { ReactNode } from "react";
 import { useCurrentSection } from "src/context/CurrentSection";
 import styles from "./HeaderLink.module.scss";
 
 export type HeaderLinkProps = {
   href: string;
-  icon: string;
+  icon: IconProps["name"];
   children: ReactNode;
   onClick: () => void;
 };
@@ -22,7 +23,7 @@ export default function HeaderLink(props: HeaderLinkProps): JSX.Element {
         onClick={onClick}
         className={active ? styles.active : undefined}
       >
-        <i className={`uil ${icon}`}></i>
+        <Icon name={icon} className={styles.icon} />
         {children}
       </a>
     </li>

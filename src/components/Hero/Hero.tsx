@@ -1,3 +1,4 @@
+import { Icon } from "@components";
 import styles from "./Hero.module.scss";
 
 export type HeroProps = {};
@@ -10,11 +11,19 @@ export default function Hero(props: HeroProps): JSX.Element {
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.social}>
-            <a href="" className={styles.icon} target="_blank">
-              <i className="uil uil-linkedin-alt"></i>
+            <a
+              href="https://github.com/jbruell"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <Icon name="LinkedIn" />
             </a>
-            <a href="" className={styles.icon} target="_blank">
-              <i className="uil uil-github-alt"></i>
+            <a
+              href="https://www.linkedin.com/in/janik-bruell/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <Icon name="Github" />
             </a>
           </div>
 
@@ -58,16 +67,16 @@ export default function Hero(props: HeroProps): JSX.Element {
               voluptates.
             </p>
             <a href="#contact" className="button button--flex" role="button">
-              Contact Me <i className="uil uil-message button__icon"></i>
+              Contact Me <Icon name="Message" className="button__icon" />
             </a>
           </div>
         </div>
 
         <div className={styles.scrollHint}>
           <a href="#about" className="button--flex">
-            <i className="uil uil-mouse-alt"></i>
+            <Icon name="Mouse" className={styles.mouseIcon} />
             <span>Scroll down</span>
-            <i className="uil uil-arrow-down"></i>
+            <Icon name="ArrowDown" className={styles.arrowIcon} />
           </a>
         </div>
       </div>

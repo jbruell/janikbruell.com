@@ -64,12 +64,16 @@
             }
 
             a {
-                font-size: 1.25rem;
-                margin-right: var(--space-1-5);
-
                 &:hover,
                 &:focus {
                     color: var(--clr-primary-200);
+                }
+                &:last-child {
+                    margin-left: var(--space-1-5);
+                }
+
+                .icon {
+                    height: 1.25rem;
                 }
             }
         }
