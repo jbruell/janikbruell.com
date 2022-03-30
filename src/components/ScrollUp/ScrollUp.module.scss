@@ -11,6 +11,7 @@
     padding: 0.3rem;
     border-radius: 0.4rem;
     z-index: var(--z-tooltip);
+    transition: bottom 0.4s;
 
     &.visible {
         bottom: 5rem;
