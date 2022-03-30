@@ -1,0 +1,14 @@
+.wrapper {
+    position: relative;
+    svg {
+        transition: opacity 0.3s ease-out;
+
+        &:first-child {
+            margin-right: -1.1rem;
+        }
+
+        &.hidden {
+            opacity: 0;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@use "utils" as *;
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--clr-body);
+    color: var(--clr-text-500);
+    margin-top: var(--header-height);
+    transition: color 0.3s, background-color 0.3s;
+
+    @include mq(md) {
+        margin-top: 0;
+    }
+}
+
+main {
+    @include mq(md) {
+        padding: 0 1rem;
+    }
+    @include mq(lg) {
+        padding: 0;
+    }
+}
+
+svg,
+svg * {
+    transition: none;
+}

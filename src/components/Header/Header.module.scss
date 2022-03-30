@@ -71,6 +71,8 @@
         }
 
         .menu {
+            z-index: var(--z-nav-menu);
+
             @include mq(md, max) {
                 position: fixed;
                 bottom: -100%;
@@ -112,7 +114,7 @@
 
             .close {
                 position: absolute;
-                right: 1.3rem;
+                right: var(--space-1);
                 bottom: 0.5rem;
                 height: 1.5rem;
                 cursor: pointer;

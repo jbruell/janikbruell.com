@@ -12,14 +12,14 @@ export default function Hero(props: HeroProps): JSX.Element {
         <div className={styles.content}>
           <div className={styles.social}>
             <a
-              href="https://github.com/jbruell"
+              href="https://linkedin.com/in/janik-bruell/"
               rel="noreferrer"
               target="_blank"
             >
               <Icon name="LinkedIn" />
             </a>
             <a
-              href="https://www.linkedin.com/in/janik-bruell/"
+              href="https://github.com/jbruell"
               rel="noreferrer"
               target="_blank"
             >

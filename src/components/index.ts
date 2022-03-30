@@ -7,4 +7,5 @@ export * from "./HeaderLink";
 export * from "./Job";
 export * from "./Icon";
 export * from "./ScrollUp";
+export * from "./ThemeToggle";
 export * from "./Timeline";

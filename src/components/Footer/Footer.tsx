@@ -27,14 +27,14 @@ export default function Footer(props: FooterProps): JSX.Element {
         </ul>
 
         <div className={styles.socials}>
-          <a href="https://github.com/jbruell" rel="noreferrer" target="_blank">
-            <Icon name="LinkedIn" className={styles.icon} />
-          </a>
           <a
-            href="https://www.linkedin.com/in/janik-bruell/"
+            href="https://linkedin.com/in/janik-bruell/"
             rel="noreferrer"
             target="_blank"
           >
+            <Icon name="LinkedIn" className={styles.icon} />
+          </a>
+          <a href="https://github.com/jbruell" rel="noreferrer" target="_blank">
             <Icon name="Github" className={styles.icon} />
           </a>
         </div>

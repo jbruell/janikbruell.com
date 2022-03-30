@@ -1,5 +1,5 @@
 import styles from "./Header.module.scss";
-import { HeaderLink, Icon } from "@components";
+import { HeaderLink, Icon, ThemeToggle } from "@components";
 import { useState } from "react";
 import useScrollPosition from "src/hooks/useScrollPosition";
 import { useTheme } from "next-themes";
@@ -10,7 +10,6 @@ export type HeaderProps = {};
 export default function Header(props: HeaderProps): JSX.Element {
   const {} = props;
 
-  const { setTheme } = useTheme();
   const showShadow = useScrollPosition((pos) => pos > 80);
   const scrollDirection = useScrollDirection();
 
@@ -39,21 +38,14 @@ export default function Header(props: HeaderProps): JSX.Element {
               About
             </HeaderLink>
             <HeaderLink href="#career" icon="Briefcase" onClick={closeNav}>
-              Skills
+              Career
             </HeaderLink>
           </ul>
           <Icon name="Times" className={styles.close} onClick={closeNav} />
         </div>
 
         <div className={styles.btns}>
-          <div
-            className={styles.themeToggle}
-            onClick={() =>
-              setTheme((theme: string) => (theme === "dark" ? "light" : "dark"))
-            }
-          >
-            <Icon name="Moon" />
-          </div>
+          <ThemeToggle className={styles.themeToggle} />
           <div className={styles.toggle} onClick={() => setOpen(true)}>
             <Icon name="Apps" />
           </div>
